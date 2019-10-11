@@ -1,16 +1,16 @@
-$(function() {
+$(function () {
   'use strict';
 
   /* =======================
   // Toggle Menu and Search
   ======================= */
   var $menuOpenButton = $(".menu-button"),
-      $menuCloseButton = $(".menu-close"),
-      $navMenu = $(".nav-menu"),
+    $menuCloseButton = $(".menu-close"),
+    $navMenu = $(".nav-menu"),
 
-      $searchOpenButton = $(".search-button"),
-      $searchCloseButton = $(".search-close-button"),
-      $search = $(".search");
+    $searchOpenButton = $(".search-button"),
+    $searchCloseButton = $(".search-close-button"),
+    $search = $(".search");
 
   $(window).on("resize", function () {
     var e = $(this);
@@ -19,19 +19,19 @@ $(function() {
     }
   });
 
-  $menuOpenButton.on("click", function() {
+  $menuOpenButton.on("click", function () {
     openMenu();
   });
 
-  $menuCloseButton.on("click", function() {
+  $menuCloseButton.on("click", function () {
     closeMenu();
   });
 
-  $searchOpenButton.on("click", function() {
+  $searchOpenButton.on("click", function () {
     openSearch();
   });
 
-  $searchCloseButton.on("click", function() {
+  $searchCloseButton.on("click", function () {
     closeSearch();
   });
 
@@ -76,15 +76,15 @@ $(function() {
 
   function reveals() {
     $(window).on('scroll', function () {
-      $(".article-box, .article-first, .post-image-box, .page-image-box, .post-body img, .page-body img, .recent-header").each(
-        function(i) {
+      $(".splash, .article-box, .article-first, .post-image-box, .page-image-box, .post-body img, .page-body img, .recent-header").each(
+        function (i) {
           var el_top = $(this).offset().top,
             win_bottom = wh + $(window).scrollTop();
 
           if (el_top < win_bottom) {
             $(this)
               .delay(i * 100)
-              .queue(function() {
+              .queue(function () {
                 $(this).addClass("reveal-in");
               });
           }
@@ -100,7 +100,7 @@ $(function() {
   $(".post-content, .page-content").fitVids({
     customSelector: ['iframe[src*="ted.com"]']
   });
-  
+
 
   /* =======================
   // Instagram Feed
