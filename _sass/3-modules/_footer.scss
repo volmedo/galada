@@ -1,6 +1,7 @@
 // FOOTER
 .footer {
-  padding: 50px 0;
+  padding: 30px 0;
+  padding-top: 20px;
   margin-top: 30px;
   background: $black;
 }
@@ -9,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   margin-bottom: 10px;
   border-bottom: 1px solid $border-color;
   .logo-text {
@@ -43,13 +44,15 @@
 
 .footer-bottom {
   display: flex;
-  align-items: center;
+  align-items: normal;
   flex-wrap: wrap;
   .copyright {
+    margin-top: 5px;
     margin-right: 60px;
     p {
       margin-bottom: 0;
       font-size: 13px;
+      line-height: 18px;
       color: $gray-blue;
       a {
         color: $gray-blue;
